@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.appdata.theperfect.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/actionList"
+            app:destination="@id/userListFragment" />
+        <action
+            android:id="@+id/actionListDetail"
+            app:destination="@id/userListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.appdata.theperfect.fragment.UserListFragment"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list">
+        <action
+            android:id="@+id/action_detail"
+            app:destination="@id/sellerDetailFragment" />
+        <action
+            android:id="@+id/action_go_rating"
+            app:destination="@id/RateUsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerDetailFragment"
+        android:name="com.appdata.theperfect.fragment.SellerDetailFragment"
+        android:label="fragment_seller_detail"
+        tools:layout="@layout/fragment_seller_detail">
+
+        <action
+            android:id="@+id/action_go_home"
+            app:destination="@id/HomeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/navigation"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/RateUsFragment"
+        android:name="com.appdata.theperfect.fragment.RateUsFragment"
+        android:label="RateUsFragment"
+        tools:layout="@layout/fragment_rate_us">
+        <action
+            android:id="@+id/action_go_home"
+            app:destination="@id/HomeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

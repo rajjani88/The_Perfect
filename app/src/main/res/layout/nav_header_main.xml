@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#181818"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.18"
+            android:background="@drawable/image_navigation"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.18"
+            android:background="#80000000"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.18"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivUser"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:contentDescription="@string/app_name"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/demo_placeholder"
+            app:civ_circle_background_color="#bcbcbc"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintStart_toEndOf="@+id/guideline1"/>
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hi Oliver!"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivUser" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/guideline2">
+
+            <ImageView
+                android:id="@+id/ivHome"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_done_deal"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="@+id/ivHome"
+                app:layout_constraintBottom_toBottomOf="@+id/ivHome"
+                app:layout_constraintStart_toEndOf="@+id/ivHome"
+                android:text="Home"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.4dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/white"
+                android:layout_marginEnd="@dimen/_30sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvHome"
+                app:layout_constraintTop_toBottomOf="@+id/tvHome"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintAppointmentDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/constraintHome">
+
+            <ImageView
+                android:id="@+id/ivAppoint"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_done_deal"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvAppoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="@+id/ivAppoint"
+                app:layout_constraintBottom_toBottomOf="@+id/ivAppoint"
+                app:layout_constraintStart_toEndOf="@+id/ivAppoint"
+                android:text="Appointment Details"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.4dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/white"
+                android:layout_marginEnd="@dimen/_30sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvAppoint"
+                app:layout_constraintTop_toBottomOf="@+id/tvAppoint"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintDoneDeal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/constraintAppointmentDetail">
+
+            <ImageView
+                android:id="@+id/ivDoneDeal"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_done_deal"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvDoneDeal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="@+id/ivDoneDeal"
+                app:layout_constraintBottom_toBottomOf="@+id/ivDoneDeal"
+                app:layout_constraintStart_toEndOf="@+id/ivDoneDeal"
+                android:text="Done Deal Details"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.4dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/white"
+                android:layout_marginEnd="@dimen/_30sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvDoneDeal"
+                app:layout_constraintTop_toBottomOf="@+id/tvDoneDeal"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintMyAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/constraintDoneDeal">
+
+            <ImageView
+                android:id="@+id/ivMyAccount"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_done_deal"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvMyAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="@+id/ivMyAccount"
+                app:layout_constraintBottom_toBottomOf="@+id/ivMyAccount"
+                app:layout_constraintStart_toEndOf="@+id/ivMyAccount"
+                android:text="My Account"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.4dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/white"
+                android:layout_marginEnd="@dimen/_30sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvMyAccount"
+                app:layout_constraintTop_toBottomOf="@+id/tvMyAccount"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintHelpCenter"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/constraintMyAccount">
+
+            <ImageView
+                android:id="@+id/ivHelpCenter"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_done_deal"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvHelpCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="@+id/ivHelpCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/ivHelpCenter"
+                app:layout_constraintStart_toEndOf="@+id/ivHelpCenter"
+                android:text="Help Center"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.4dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/white"
+                android:layout_marginEnd="@dimen/_30sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvHelpCenter"
+                app:layout_constraintTop_toBottomOf="@+id/tvHelpCenter"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/constraintHelpCenter">
+
+            <ImageView
+                android:id="@+id/ivLogout"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_done_deal"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="@+id/ivLogout"
+                app:layout_constraintBottom_toBottomOf="@+id/ivLogout"
+                app:layout_constraintStart_toEndOf="@+id/ivLogout"
+                android:text="Logout"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.4dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/white"
+                android:layout_marginEnd="@dimen/_30sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvLogout"
+                app:layout_constraintTop_toBottomOf="@+id/tvLogout"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

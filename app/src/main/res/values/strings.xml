@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">The Perfect</string>
+    <string name="whatever_you_are_nlooking_for">Whatever You Are\nLooking For</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="txt_to_start">START</string>
+    <string name="forgot_password"><u>Forgot Password</u></string>
+    <string name="sign_up"><u>Sign Up</u></string>
+    <string name="any_support">We are just a call away… \nCall us on</string>
+    <string name="please_choose_your_preference">Please Choose Your\nPreference</string>
+
+    <string name="msg_no_network">Please check your internet connection.</string>
+    <string name="no_internet">No Internet</string>
+    <string name="btn_ok">OK</string>
+    <string name="msg_internet_seems_slow">Your internet seems to be slow. Please wait.</string>
+    <string name="msg_unable_connect_server">We are not able to connect to the server. Please try again later.</string>
+    <string name="msg_check_internet_connection">Network Error. Please check internet connection and try again.</string>
+    <string name="msg_something_went_wrong">Something went wrong.</string>
+    <string name="msg_please_wait">Thank you for your patience…</string>
+    <string name="txt_camera">Camera</string>
+    <string name="txt_selectoption">choose an option</string>
+    <string name="txt_gallery">Gallery</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCO1gAI-pxEdMo0LcGVn4bRPDRXkZvn5jY</string>
+
+    <string name="store_name" translatable="false">Auto T-Shirt Shop</string>
+
+    <!-- Payment notification -->
+    <string name="channel_name">Payment Channel</string>
+    <string name="send_notification">Send Notification</string>
+    <string name="notification_title" translatable="false">Account top up</string>
+    <string name="notification_text">Your account balance in close to zero. Top it up now.</string>
+    <string name="pay_other_method">Top-up using a different method</string>
+
+    <!-- Checkout -->
+    <string name="googlepay_status_unavailable">Unfortunately, Google Pay is not available on this device.</string>
+    <string name="payments_show_name">Successfully received payment data for %s!</string>
+    <string name="gateway_replace_name_example">"Gateway name set to \"example\" - please modify Constants.java and replace it with your own gateway."</string>
+    <string name="checkout_item_description">Description</string>
+
+    <string name="googlepay_button_content_description">Google Pay</string>
+    <string name="buy_with_googlepay_button_content_description">Buy with Google Pay</string>
+</resources>
